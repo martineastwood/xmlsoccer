@@ -25,7 +25,7 @@ standings = xmlsoccer.call_api(method='GetLeagueStandingsBySeason',
                                league='English Premier League')
 ```
 
-# Compatability #
+# compatibility #
 
 The code has been successfully tested on Windows 7, OSX 10.9, Ubuntu and ElementaryOS Luna
 
