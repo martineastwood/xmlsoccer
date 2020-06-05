@@ -3,6 +3,12 @@ XmlSoccer Parser
 
 Simple Python3 client for interacting with the [XmlSoccer](http://www.xmlsoccer.com/) API.
 
+# Installation
+```bash
+cd xmlsoccer
+python setup.py install
+```
+
 # Basic Usage #
 
 All of the XmlSoccer API methods can be accessed via the `call_api` function, as shown in the example below.
