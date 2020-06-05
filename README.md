@@ -21,8 +21,8 @@ teams = xmls.call_api(method='GetAllTeams')
 leagues = xmls.call_api(method='GetAllLeagues')
 
 standings = xmls.call_api(method='GetLeagueStandingsBySeason',
-                               seasonDateString='1314',
-                               league='Scottish Premier League')
+                          seasonDateString='1314',
+                          league='Scottish Premier League')
 ```
 
 Martin
