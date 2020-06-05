@@ -9,8 +9,8 @@ class XmlSoccer(object):
         :param use_demo: boolean whether to use the xmlsoccer demo account or not
         """
         self.api_key = api_key
-        self.service_address = '''http://www.xmlsoccer.com/FootballData.asmx/'''
-        self.demo_address = '''http://www.xmlsoccer.com/FootballDataDemo.asmx/'''
+        self.service_address = """http://www.xmlsoccer.com/FootballData.asmx/"""
+        self.demo_address = """http://www.xmlsoccer.com/FootballDataDemo.asmx/"""
         self.demo = use_demo
 
     def set_api_key(self, api_key):
@@ -51,7 +51,7 @@ class XmlSoccer(object):
         :raise (Exception('Error: Method not passed to get_xmlsoccer')):
         """
         if method is None:
-            raise(Exception('Error: Method not passed to call_api'))
+            raise (Exception("Error: Method not passed to call_api"))
         # create the url
         if not self.demo:
             address = self.service_address + method
@@ -59,7 +59,7 @@ class XmlSoccer(object):
             address = self.demo_address + method
         # create the request parameters
         params = dict()
-        params['ApiKey'] = self.api_key
+        params["ApiKey"] = self.api_key
         for kwarg in kwargs:
             params[kwarg] = kwargs[kwarg]
         # list to store the data in
@@ -68,15 +68,15 @@ class XmlSoccer(object):
             # make the request
             r = requests.get(address, params=params)
             # parse the xml
-            root = etree.XML(r.text.encode('utf-8'))
+            root = etree.XML(r.text.encode("utf-8"))
             if len(root) == 0:
-                raise(Exception(root.text))
+                raise (Exception(root.text))
             for child in list(root):
                 tmp = dict()
                 for element in list(child):
                     tmp[element.tag] = element.text
                 data.append(tmp)
-        except Exception, e:
-            print str(e)
+        except Exception as e:
+            print(str(e))
         # return the results
         return data

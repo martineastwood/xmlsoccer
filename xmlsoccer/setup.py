@@ -1,15 +1,12 @@
-#!/usr/bin/env python
-
-from distutils.core import setup
-
-execfile('xmlsoccer/version.py')
+from setuptools import setup
 
 setup(
-    name = 'xmlsoccer',
-    version = '0.1',
-    description = 'Parse xmlsoccer feed',
-    long_description = open('README.rst').read() + '\n\n' + open('HISTORY.rst').read(),
-    author = 'Martin Eastwood',
-    author_email = 'admin@stattaca.com',
-    url = 'http://pena.lt/y',
-    packages = ['xmlsoccer'])
+    name="xmlsoccer",
+    version="0.2",
+    description="Parse xmlsoccer feed",
+    author="Martin Eastwood",
+    author_email="hello@martineastwood.co.uk",
+    packages=["xmlsoccer"],
+    install_requires=["requests", "lxml"],
+    url="http://pena.lt/y",
+)
