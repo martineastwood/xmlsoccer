@@ -30,5 +30,3 @@ standings = xmls.call_api(method='GetLeagueStandingsBySeason',
                           seasonDateString='1314',
                           league='Scottish Premier League')
 ```
-
-Martin
