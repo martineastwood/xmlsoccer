@@ -1,7 +1,7 @@
 XmlSoccer Parser
 =========
 
-Simple Python client for interacting with the [XmlSoccer](http://www.xmlsoccer.com/) API.
+Simple Python3 client for interacting with the [XmlSoccer](http://www.xmlsoccer.com/) API.
 
 # Basic Usage #
 
